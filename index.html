@@ -2,77 +2,176 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="PARCEL.ONE FAQ – Internationale Versandlösungen für Online-Händler: Versandzeiten, Retouren, Zollabwicklung und mehr." />
   <meta name="keywords" content="Internationaler Versand, eCommerce Logistik, PARCEL.ONE, Versand nach Europa, Retourenmanagement, Zollabwicklung, Lieferung weltweit" />
   <meta name="author" content="PARCEL.ONE GmbH" />
   <meta name="robots" content="index, follow" />
   <title>PARCEL.ONE – Häufig gestellte Fragen (FAQ)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 2rem;
-      background-color: #f9f9f9;
+      font-family: 'Inter', Arial, sans-serif;
+      background-color: #f4f6fb;
       color: #333;
+      line-height: 1.6;
     }
-    h1 {
+    a {
       color: #004aad;
+      text-decoration: none;
     }
-    h2 {
-      color: #222;
-      margin-top: 2rem;
+    a:hover {
+      text-decoration: underline;
     }
-    .faq-item {
-      margin-bottom: 1.5rem;
+    ul {
+      padding-left: 1.25rem;
     }
-    .language-switcher {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
+    
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
     }
+
+    /* Header */
+    header {
+      background: #004aad;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    }
+    header img.logo {
+      height: 40px;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    
+    /* Language Switcher */
     .language-switcher a {
       margin-left: 1rem;
-      text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
-      color: #004aad;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      background-color: rgba(255 255 255 / 0.15);
+      transition: background-color 0.3s ease;
+    }
+    .language-switcher a:hover {
+      background-color: rgba(255 255 255 / 0.35);
     }
     .language-switcher img {
-      height: 16px;
-      width: 24px;
+      width: 20px;
+      height: 14px;
       margin-right: 0.4rem;
+      border-radius: 2px;
+      object-fit: cover;
+    }
+
+    /* FAQ heading */
+    .faq-title {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004aad;
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* FAQ items */
+    .faq-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .faq-item:hover {
+      box-shadow: 0 6px 16px rgb(0 0 0 / 0.15);
+    }
+    .faq-item h2 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      color: #004aad;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .faq-item p, .faq-item ul {
+      margin: 0.5rem 0 0 0;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      header h1 {
+        font-size: 1.25rem;
+      }
+      .language-switcher a {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="language-switcher">
-    <a href="faq-en.html"><img src="https://flagcdn.com/gb.svg" alt="English" />EN</a>
-    <a href="index.html"><img src="https://flagcdn.com/de.svg" alt="Deutsch" />DE</a>
-  </div>
+  <header>
+    <img class="logo" src="https://parcel.one/assets/img/logo.svg" alt="PARCEL.ONE Logo" />
+    <h1>FAQ</h1>
+    <nav class="language-switcher" aria-label="Sprachauswahl">
+      <a href="faq-en.html" aria-label="English"><img src="https://flagcdn.com/gb.svg" alt="English flag" />EN</a>
+      <a href="index.html" aria-current="page" aria-label="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsche Flagge" />DE</a>
+    </nav>
+  </header>
 
-  <h1>PARCEL.ONE – Häufig gestellte Fragen (FAQ)</h1>
+  <main class="container" role="main">
+    <h2 class="faq-title">Häufig gestellte Fragen (FAQ)</h2>
 
-  <div class="faq-item">
-    <h2>1. Was ist PARCEL.ONE?</h2>
-    <p>PARCEL.ONE ist ein deutsches Logistikunternehmen, das sich auf den internationalen Versand für Online-Händler spezialisiert hat. Mit einer Anbindung an über 100 Zustelldienste weltweit sorgt PARCEL.ONE dafür, dass Ihre Pakete zuverlässig, schnell und kosteneffizient in über 200 Länder geliefert werden.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>1. Was ist PARCEL.ONE?</h2>
+      <p>PARCEL.ONE ist ein deutsches Logistikunternehmen, das sich auf den internationalen Versand für Online-Händler spezialisiert hat. Mit einer Anbindung an über 100 Zustelldienste weltweit sorgt PARCEL.ONE dafür, dass Ihre Pakete zuverlässig, schnell und kosteneffizient in über 200 Länder geliefert werden.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>2. Wie funktioniert PARCEL.ONE?</h2>
-    <p>Online-Händler senden ihre Pakete an ein Zentrallager in Deutschland. Dort werden sie digital erfasst, konsolidiert und anhand von Algorithmen an den besten Versandpartner im Zielland weitergeleitet. Ziel ist es, durch intelligente Routenwahl Lieferzeiten zu verkürzen und Retouren zu minimieren.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>2. Wie funktioniert PARCEL.ONE?</h2>
+      <p>Online-Händler senden ihre Pakete an ein Zentrallager in Deutschland. Dort werden sie digital erfasst, konsolidiert und anhand von Algorithmen an den besten Versandpartner im Zielland weitergeleitet. Ziel ist es, durch intelligente Routenwahl Lieferzeiten zu verkürzen und Retouren zu minimieren.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>3. In welche Länder liefert PARCEL.ONE?</h2>
-    <p>Der Versand ist in über 200 Länder möglich, darunter alle EU-Staaten, Großbritannien, die USA, Kanada, China, Australien und viele mehr. Die Zustellung erfolgt durch etablierte lokale Partner wie La Poste, Royal Mail, USPS oder Correos.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>3. In welche Länder liefert PARCEL.ONE?</h2>
+      <p>Der Versand ist in über 200 Länder möglich, darunter alle EU-Staaten, Großbritannien, die USA, Kanada, China, Australien und viele mehr. Die Zustellung erfolgt durch etablierte lokale Partner wie La Poste, Royal Mail, USPS oder Correos.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>4. Welche Versandservices bietet PARCEL.ONE an?</h2>
-    <p>Unsere Services umfassen:
+    <section class="faq-item" tabindex="0">
+      <h2>4. Welche Versandservices bietet PARCEL.ONE an?</h2>
+      <p>Unsere Services umfassen:</p>
       <ul>
         <li>Unverfolgte und verfolgte Sendungen</li>
         <li>Lieferung an Haustür, Paketstation oder Abholort</li>
@@ -80,95 +179,85 @@
         <li>Rücksendeoptionen mit Label</li>
         <li>API-gestützte Datenanbindung für Tracking & Zoll</li>
       </ul>
-    </p>
-  </div>
+    </section>
 
-  <div class="faq-item">
-    <h2>5. Ist PARCEL.ONE auch für kleine Online-Shops geeignet?</h2>
-    <p>Ja. Es gibt keine Mindestmengen. Unsere skalierbaren Lösungen sind ideal für Startups ebenso wie für etablierte Shops. Sie profitieren von transparenten Preisen und einfachem Einstieg.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>5. Ist PARCEL.ONE auch für kleine Online-Shops geeignet?</h2>
+      <p>Ja. Es gibt keine Mindestmengen. Unsere skalierbaren Lösungen sind ideal für Startups ebenso wie für etablierte Shops. Sie profitieren von transparenten Preisen und einfachem Einstieg.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>6. Wie integriere ich PARCEL.ONE in mein Shopsystem?</h2>
-    <p>Sie haben mehrere Optionen:
+    <section class="faq-item" tabindex="0">
+      <h2>6. Wie integriere ich PARCEL.ONE in mein Shopsystem?</h2>
+      <p>Sie haben mehrere Optionen:</p>
       <ul>
         <li>Fertige Plugins für Shopify, WooCommerce oder Magento</li>
         <li>REST API für individuelle Anbindungen</li>
         <li>Manueller CSV-Upload im Dashboard</li>
       </ul>
-    </p>
-  </div>
+    </section>
 
-  <div class="faq-item">
-    <h2>7. Gibt es eine Sendungsverfolgung?</h2>
-    <p>Ja. Alle verfolgten Sendungen erhalten eine Trackingnummer mit Echtzeitstatus auf einer einheitlichen Trackingseite – auch mobil optimiert und mehrsprachig darstellbar.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>7. Gibt es eine Sendungsverfolgung?</h2>
+      <p>Ja. Alle verfolgten Sendungen erhalten eine Trackingnummer mit Echtzeitstatus auf einer einheitlichen Trackingseite – auch mobil optimiert und mehrsprachig darstellbar.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>8. Wie schnell ist der Versand ins Ausland?</h2>
-    <p>
+    <section class="faq-item" tabindex="0">
+      <h2>8. Wie schnell ist der Versand ins Ausland?</h2>
+      <p>Lieferzeiten variieren je nach Zielland, lokalen Feiertagen und Zollabwicklung:</p>
       <ul>
         <li>Innerhalb Europas: 2–5 Werktage</li>
         <li>Nordamerika: 5–8 Werktage</li>
         <li>Weltweit: 7–12 Werktage</li>
       </ul>
-      Lieferzeiten hängen vom Zielland, lokalen Feiertagen und der Zollabwicklung ab.
-    </p>
-  </div>
+    </section>
 
-  <div class="faq-item">
-    <h2>9. Was passiert bei Verlust oder Beschädigung?</h2>
-    <p>Sie können innerhalb von 7 Werktagen nach Zustellfehler einen Schadenfall melden. Benötigt werden Fotos (bei Schäden), eine Rechnung und die Trackingnummer. Der Fall wird schnell bearbeitet.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>9. Was passiert bei Verlust oder Beschädigung?</h2>
+      <p>Sie können innerhalb von 7 Werktagen nach Zustellfehler einen Schadenfall melden. Benötigt werden Fotos (bei Schäden), eine Rechnung und die Trackingnummer. Der Fall wird schnell bearbeitet.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>10. Gibt es eine Rücksendeoption?</h2>
-    <p>Ja. Sie können Rücksendeetiketten erstellen lassen. Kunden geben die Rücksendung vor Ort ab. Die Pakete werden gebündelt und regelmäßig zu Ihnen retourniert. Auch automatisierte Rücksendeprozesse via API sind möglich.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>10. Gibt es eine Rücksendeoption?</h2>
+      <p>Ja. Sie können Rücksendeetiketten erstellen lassen. Kunden geben die Rücksendung vor Ort ab. Die Pakete werden gebündelt und regelmäßig zu Ihnen retourniert. Auch automatisierte Rücksendeprozesse via API sind möglich.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>11. Was kostet der Versand mit PARCEL.ONE?</h2>
-    <p>Die Preise variieren je nach Zielland, Gewicht, Servicelevel und Versandvolumen. Gerne erstellen wir ein individuelles Angebot. Wenden Sie sich an unser Vertriebsteam oder nutzen Sie unseren Preisrechner.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>11. Was kostet der Versand mit PARCEL.ONE?</h2>
+      <p>Die Preise variieren je nach Zielland, Gewicht, Servicelevel und Versandvolumen. Gerne erstellen wir ein individuelles Angebot. Wenden Sie sich an unser Vertriebsteam oder nutzen Sie unseren Preisrechner.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>12. Wie läuft die Zollabwicklung ab?</h2>
-    <p>Wir unterstützen DDP & DDU inkl.:
+    <section class="faq-item" tabindex="0">
+      <h2>12. Wie läuft die Zollabwicklung ab?</h2>
+      <p>Wir unterstützen DDP & DDU inkl.:</p>
       <ul>
         <li>Automatische HS-Code-Zuweisung</li>
         <li>Erstellung von Zollformularen (CN22, CN23)</li>
         <li>Vorab-Datenübermittlung gemäß ICS2 / EU-Richtlinien</li>
       </ul>
-      Unsere Prozesse sorgen für schnelle und gesetzeskonforme Einfuhr.
-    </p>
-  </div>
+      <p>Unsere Prozesse sorgen für schnelle und gesetzeskonforme Einfuhr.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>13. Worin liegt der Unterschied zu klassischen Paketdiensten?</h2>
-    <p>PARCEL.ONE ist kein Versanddienst, sondern ein Logistiknetzwerk mit intelligenter Steuerung. Statt einer festen Route nutzen wir pro Sendung den besten lokalen Partner. Das bedeutet: weniger Rückläufer, schnellere Zustellung und bessere Nachverfolgung – alles ohne Systemwechsel.</p>
-  </div>
+    <section class="faq-item" tabindex="0">
+      <h2>13. Worin liegt der Unterschied zu klassischen Paketdiensten?</h2>
+      <p>PARCEL.ONE ist kein Versanddienst, sondern ein Logistiknetzwerk mit intelligenter Steuerung. Statt einer festen Route nutzen wir pro Sendung den besten lokalen Partner. Das bedeutet: weniger Rückläufer, schnellere Zustellung und bessere Nachverfolgung – alles ohne Systemwechsel.</p>
+    </section>
 
-  <div class="faq-item">
-    <h2>14. Wie kontaktiere ich den Support?</h2>
-    <p>
+    <section class="faq-item" tabindex="0">
+      <h2>14. Wie kontaktiere ich den Support?</h2>
       <ul>
         <li>E-Mail: <a href="mailto:support@parcel.one">support@parcel.one</a></li>
         <li>Telefon: +49 (0) 6404 697 9000 (Mo–Fr, 09–18 Uhr)</li>
         <li>Über das Dashboard: Ticket einreichen</li>
       </ul>
-    </p>
-  </div>
+    </section>
 
-  <div class="faq-item">
-    <h2>15. Gibt es ein Kundendashboard?</h2>
-    <p>Ja. Das Dashboard bietet:
+    <section class="faq-item" tabindex="0">
+      <h2>15. Gibt es ein Kundendashboard?</h2>
+      <p>Ja. Das Dashboard bietet:</p>
       <ul>
         <li>Sendungsstatus und Trackingübersicht</li>
         <li>Label-Erstellung und CSV-Upload</li>
         <li>Rechnungen, Reports und Performance-Daten</li>
         <li>Support-Tickets und Schadensmeldungen</li>
       </ul>
-      Besuchen Sie: <a href="https://dashboard.parcel.one">dashboard.parcel.one</a></p>
-  </div>
-</body>
-</html>
+      <p>Besuchen Sie: <a href="https://dashboard.parcel.one">das
